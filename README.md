@@ -50,6 +50,12 @@ Any small platic DYI box that fits easily inside the heat pump should do:
     <img src="images/HeatPumpCtrl-Boxed-Inside.jpg">
 </p>
 
+The serial port - CN105 - on our Mitsubishi heat pumps:
+
+<p align="center">
+    <img src="images/HeatPumpCtrl-CN105.jpg">
+</p>
+
 The IR sender led fits inside the receiver housing:
 
 <p align="center">
