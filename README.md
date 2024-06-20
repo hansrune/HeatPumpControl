@@ -89,7 +89,7 @@ The detailed PCB diagram is [available here](KiCad/HeatPumpControl-schema-2.0.pd
 This project uses my [KiCad-lib-ESP32 repository](https://github.com/hansrune/KiCad-lib-ESP32.git) as a [git submodule](https://www.git-scm.com/book/en/v2/Git-Tools-Submodules). To check this out, use the following:
 
 ```bash
-git clone --recurse-submodules https://github.com/hansrune/BallValveController.git 
+git clone --recurse-submodules https://github.com/hansrune/HeatPumpControl.git 
 ```
 
 ### Materials used
