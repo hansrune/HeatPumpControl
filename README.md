@@ -1,7 +1,6 @@
-# Generic ESP32c3 board with IR blaster, serial port , i2c - used for heath pump control 
+# Generic ESP32c3 board with IR blaster, IR receiverk, serial port, i2c and more
 
-A generic mini IO based on ESP32c3. This one has an IR blaster and serial port with level shifter suitable for Mitsubishi CN105 port. Other ESP32c3 pins are available with pin headers for I2C, 1-wire, and other general pusposes
-
+A small generic mini IO based on ESP32c3. This one has an IR blaster, IR receiver, and serial port with level shifter suitable for Mitsubishi CN105 port. Other ESP32c3 pins are available with pin headers for I2C, 1-wire, and other general purposes
 
 ## Introduction
 
@@ -31,33 +30,43 @@ Some of the main features and benefits
 
 ## Setup and mounting
 
-Any small platic DYI box that fits easily inside
+The version 2.0 PCB needs an extra grounding wire:
 
 <p align="center">
-    <img src="images/BallValveCtrl-Box.jpg">
+    <img src="images/HeatPumpCtrl-PCB-Mounts.jpg">
 </p>
 
-The switch is used to select between normally open and normally closed operation. As the ball valve will return to it's default position during reset, the valve position feedback switches are used to automatically determine if the setup is normally open or normally closed.
-
-One of my permanent setups look like this when mounted
+The wiring for a Mistubushi heat pump:
 
 <p align="center">
-    <img src="images/BallValveCtrl-Mounted.jpg">
+    <img src="images/HeatPumpCtrl-Wiring.jpg">
 </p>
 
-... where the 1-wire sensors are attached to top and bottom of our electric water boiler.
+A normal visible LED can be used in series with the IR LED - just in case you want to see the activity
+
+Any small platic DYI box that fits easily inside the heat pump should do:
+
+<p align="center">
+    <img src="images/HeatPumpCtrl-Boxed-Inside.jpg">
+</p>
+
+The IR sender led fits inside the receiver housing:
+
+<p align="center">
+    <img src="images/HeatPumpCtrl-IR-LED.jpg">
+</p>
+
+The same PCB can be used for many other purposes. Here is for a firmware build test:
+
+<p align="center">
+    <img src="images/HeatPumpCtrl-Sensors-1.jpg">
+</p>
+
 
 ## Implementation and design
 
-The easiest way to view the controller is probably this block level wiring diagram:
+The detailed PCB diagram is [available here](KiCad/HeatpumpControl-schema-2.0.pdf)
 
-<p align="center">
-    <img src="images/BallValveCtrl-Wiring-7.0.png">
-</p>
-
-This is just a typical setup for the various external components. The detailed PCB diagram is [available here](KiCad/BallValveController-schema-7.0.pdf)
-
-If you use more than one 1-wire sensor, it is easier in ESPHome to use both inputs  (RX+TX in diagram) with automatic sensor address detection.
 
 ## GPIO pin usage
 
@@ -87,44 +96,22 @@ git clone --recurse-submodules https://github.com/hansrune/BallValveController.g
 
 This project uses the [Seed Studio XIAO ESP32C3 RISC-V module](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html). This tiny device has proven to be more reliable than most ESP8266 modules used in earlier versions. This module also comes with an IPX connector for connecting an external antenna, and is delivered with a simple external antenna for good range.
 
-A ball valve like [these HSH-FLO valves](https://www.ebay.com/itm/121728665101?var=420727385309) uses metal gears, and also have a manual override possibility. Despite the moderate cost, I have found them very reliable. I typically use a 2 or some times 3-port version, size 3/4" DN20, DC12/24V and with CR05-01 wiring
+5V power can be supplied over USB-C or the serial port pin headers
 
-Any available 12V DC power supply over 1A should do.
-
-There are many options and possible pinouts for DC-DC converters for the 12V to 5V conversion. A linear regulator (L7805) will need a heatsink, so a DC-DC converter is recommended.
-
-<p align="center">
-    <img src="images/DC-DC-Options.jpg">
-</p>
-
-The MOSFETs need a low Vgs trigger voltage, i.e. well under 3V on full load. I have used Si2301/A1SHB for the P-channel, and Si2302/N025P for the N-channel, and 2N2222/1P - all SOT-23 packages.
-
-Resistors are 0805 size. Screw terminals are 3.5mm, which is a tight fit when ferrules are being used.
-
-For more information, use [this KiCad BOM](KiCad/BallValveController-BOM.csv)
+For more information, use [this KiCad BOM](KiCad/HeatPumpControl-BOM.csv)
 
 ## Hardware assembly
 
 Soldering a prototype by hand is possible if you have a steady hand and a small solder iron tip. A microscope is recommended to propely inspect the solder joints.
 
-Recommend to do the SMD parts first, then other components. I prefer to mount the 5mm LEDs on the back side.
-
-### Hardware tests
-
-You should test at least the following **before adding the ESP32 module**:
-
-- Attach a battery and check that the valve can be operated both NO and NC
-- Add a power supply and check that 5V conversion is OK
-- Apply 5V to the ESP32c3 pin 11 to check that the relay is operated
-- Apply 0V to pin 1 of the ESP32c3 and check that pin 2 receives a 200ms readout of the battery voltage (divided by the 68k + 20k resistors)
+Recommend to do the SMD parts first, then other components.
 
 ## Known bugs
 
-A Fibaro Smart implant needs a 9-30V power supply. To accomodate that, you can supply 12V by running a wire on the back of the PCB as follows:
+The version 2.0 PCB has a few flaws
 
-<p align="center">
-    <img src="images/Implant-12V.png">
-</p>
+- The NPN-tranistor upside down
+- The copper fill grounding is missing for the IR receiver GND pin. An added wire is needed if you use it
 
 <!-- 
 
@@ -134,7 +121,7 @@ A Fibaro Smart implant needs a 9-30V power supply. To accomodate that, you can s
 
 ## License
 
-This project is licensed under the [GNU General Public License v3.0](GNU-LICENSE-V3.txt) and [CERN-OHL-W](OHL-LICENSE.txt) and [CC BY-SA](CC-BY-SA-LICENCE.txt)
+This project is licensed under the [GNU General Public License v3.0](GNU-LICENSE-V3.txt) for the software, [CERN-OHL-W](OHL-LICENSE.txt) for the hardwaremm, and [CC BY-SA](CC-BY-SA-LICENCE.txt) for the documentation and ideas.
 
 <p align="center" width="100%">
     <img src="images/oshw_cert_label.png">
