@@ -4,7 +4,7 @@ A small generic mini IO based on ESP32c3. This one has an IR blaster, IR receive
 
 ## Introduction
 
-This small IO board was made to easily fit inside a heat pump, more specifically Mitsubushi heat pump serial ports (CN105 connector). 
+This small IO board was made to easily fit inside a small DYI boxm, a heat pump or other. For Mitsubushi heat pumps, the CN105 connector is used for serial port communications and for power supply.
 
 Some of the main features and benefits
 
@@ -72,16 +72,16 @@ The detailed PCB diagram is [available here](KiCad/HeatpumpControl-schema-2.0.pd
 
 | PIN      | Capabilty          | Function                            |
 |----------|--------------------|-------------------------------------|
-| GPIO2    | Active low out     | Activate battery read               |
-| GPIO3/A1 | Analog in          | Battery read input                  |
-| GPIO4    | Active low in      | Valve open                          |
-| GPIO5    | Active low in      | Valve closed                        |
+| GPIO2    | Pulled up          | N/A                                 |
+| GPIO3/A1 | Generic IO         | On IR receiver pin header           |
+| GPIO4    | Actice high out    | IR sender                           |
+| GPIO5    | Generic IO         | Pull-up possible                    |
 | GPIO6    | I2C                | SDA                                 |
 | GPIO7    | I2C                | SCL                                 |
 | GPIO9    | Active low out     | Internal status LED                 |
-| GPIO10   | Active high out    | Valve activate to non-default state |
-| GPIO20   | RX / 1-wire        | Serial or 1-wire sensor             |
-| GPIO21   | TX / 1-wire        | Serial or 1-wire sensor             |
+| GPIO10   | Generic IO         | Pull-up possible                    |
+| GPIO20   | RX                 | Serial to heatpump TX               |
+| GPIO21   | TX                 | Serial to heatpump RX               |
 
 
 ## Hardware - getting started
