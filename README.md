@@ -65,7 +65,7 @@ The same PCB can be used for many other purposes. Here is for a firmware build t
 
 ## Implementation and design
 
-The detailed PCB diagram is [available here](KiCad/HeatpumpControl-schema-2.0.pdf)
+The detailed PCB diagram is [available here](KiCad/HeatPumpControl-schema-2.0.pdf)
 
 
 ## GPIO pin usage
