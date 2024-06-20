@@ -56,7 +56,7 @@ The IR sender led fits inside the receiver housing:
     <img src="images/HeatPumpCtrl-IR-LED.jpg">
 </p>
 
-The same PCB can be used for many other purposes. Here is for a firmware build test:
+The same PCB can be used for many other purposes. Here is for a firmware build test with CO2 sensor, I2C temp/humid and light, PIR sensor and a 1-wire temp sensor
 
 <p align="center">
     <img src="images/HeatPumpCtrl-Sensors-1.jpg">
