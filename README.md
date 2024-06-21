@@ -1,10 +1,12 @@
-# Generic ESP32c3 board with IR blaster, IR receiverk, serial port, i2c and more
+# Generic ESP32c3 board with IR blaster, IR receiver, serial port, i2c and more
 
-A small generic mini IO based on ESP32c3. This one has an IR blaster, IR receiver, and serial port with level shifter suitable for Mitsubishi CN105 port. Other ESP32c3 pins are available with pin headers for I2C, 1-wire, and other general purposes
+A small generic mini IO based on ESP32c3. This one has an IR blaster, IR receiver, and serial port with a simple 5V - 3.3V level shifter suitable for Mitsubishi CN105 port. Other ESP32c3 pins are available with pin headers for I2C, 1-wire, and other general purposes
 
 ## Introduction
 
-This small IO board was made to easily fit inside a small DYI boxm, a heat pump or other. For Mitsubushi heat pumps, the CN105 connector is used for serial port communications and for power supply.
+This small IO board was made to easily fit inside a small DYI box, a heat pump or other. 
+
+For Mitsubushi heat pumps, the CN105 connector is used for serial port communications and for power supply.
 
 Some of the main features and benefits
 
@@ -30,7 +32,7 @@ Some of the main features and benefits
 
 ## Setup and mounting
 
-The version 2.0 PCB needs an extra grounding wire:
+The version 2.0 PCB needs an extra grounding wire if you use the IR receiver ground pin:
 
 <p align="center">
     <img src="images/HeatPumpCtrl-PCB-Mounts.jpg">
@@ -42,7 +44,7 @@ The wiring for a Mistubushi heat pump:
     <img src="images/HeatPumpCtrl-Wiring.jpg">
 </p>
 
-A normal visible LED can be used in series with the IR LED - just in case you want to see the activity
+A visible LED can be used in series with the IR LED - just in case you want to see the activity
 
 Any small platic DYI box that fits easily inside the heat pump should do:
 
@@ -100,7 +102,7 @@ git clone --recurse-submodules https://github.com/hansrune/HeatPumpControl.git
 
 ### Materials used
 
-This project uses the [Seed Studio XIAO ESP32C3 RISC-V module](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html). This tiny device has proven to be more reliable than most ESP8266 modules used in earlier versions. This module also comes with an IPX connector for connecting an external antenna, and is delivered with a simple external antenna for good range.
+This project uses the [Seed Studio XIAO ESP32C3 RISC-V module](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html). This tiny device has proven to be more reliable than most ESP8266 modules. This module also comes with an IPX connector for an external antenna, and is delivered with a simple external antenna for good range.
 
 5V power can be supplied over USB-C or the serial port pin headers
 
@@ -114,16 +116,10 @@ Recommend to do the SMD parts first, then other components.
 
 ## Known bugs
 
-The version 2.0 PCB has a few flaws
+The version 2.0 PCB has some flaws that fairly easy to work around:
 
-- The NPN-tranistor upside down
+- The NPN-tranistor need to be mounted upside down
 - The copper fill grounding is missing for the IR receiver GND pin. An added wire is needed if you use it
-
-<!-- 
-
-## How to contribute
-
--->
 
 ## License
 
@@ -132,4 +128,3 @@ This project is licensed under the [GNU General Public License v3.0](GNU-LICENSE
 <p align="center" width="100%">
     <img src="images/oshw_cert_label.png">
 </p>
-
