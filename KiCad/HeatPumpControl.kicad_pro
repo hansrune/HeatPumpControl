@@ -549,7 +549,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "MotorControl.net",
-      "plot": "",
+      "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",

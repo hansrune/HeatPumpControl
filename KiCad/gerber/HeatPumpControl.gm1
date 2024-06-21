@@ -1,11 +1,11 @@
-G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,7.0.7*
-G04 #@! TF.CreationDate,2023-10-16T20:45:54+02:00*
+G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,8.0.3*
+G04 #@! TF.CreationDate,2024-06-21T14:32:02+02:00*
 G04 #@! TF.ProjectId,HeatPumpControl,48656174-5075-46d7-9043-6f6e74726f6c,2.0*
 G04 #@! TF.SameCoordinates,Original*
 G04 #@! TF.FileFunction,Profile,NP*
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 7.0.7) date 2023-10-16 20:45:54*
+G04 Created by KiCad (PCBNEW 8.0.3) date 2024-06-21 14:32:02*
 %MOMM*%
 %LPD*%
 G01*
