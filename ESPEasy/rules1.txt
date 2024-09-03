@@ -1,0 +1,22 @@
+On System#Boot do 
+  timerset,1,1
+  taskvalueset,8,2,0 // reset watchdog timeout (rule set 4) as in done
+  event StatusErr
+endon
+
+on WiFi#Connected do
+  logentry,"ESPEasy %sysname%: WiFi connected  to %ssid% / %bssid% / channel %wi_ch% / %rssi% dB / %ip% - iswifi is %iswifi%"
+  event StatusOK
+endon
+
+on WiFi#ChangedAccesspoint do
+  logentry,"ESPEasy %sysname%: WiFi changed accesspoint to %ssid% / %bssid% / channel %wi_ch% / %rssi% dB / %ip% - iswifi is %iswifi%"
+  timerset,7,10      // this happens before DHCP is done - use timer to delay it
+  event StatusBlink
+endon
+
+on Rules#Timer=7 do
+  logentry,"ESPEasy %sysname%: WiFi timer %ssid% / %bssid% / channel %wi_ch% / %rssi% dB / %ip% - iswifi is %iswifi%"
+  event StatusOK
+endon
+// -- end of rules1.txt --

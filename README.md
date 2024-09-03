@@ -114,6 +114,26 @@ Soldering a prototype by hand is possible if you have a steady hand and a small 
 
 Recommend to do the SMD parts first, then other components.
 
+## 3D printed enclosure
+
+An enclosure made in [FreeCAD](https://www.freecad.org/) is available in [this folder](./FreeCAD). You may also just use the `.stl` files for your 3D printer slicer.
+
+## Firmwares
+
+### ESPHome
+
+ESPHome firmware can be set up from [this ESPHome configuration repository](https://github.com/hansrune/esphome-config) using the `test_mitsubishi_hp.yaml` as a template
+
+Follow the [README](https://github.com/hansrune/esphome-config) for instruction on what you will likely want to change.
+
+By default, both the serial CN105 interface as well as the IR sender is set up in this firmware. You likely want just one of them.
+
+### ESPEasy
+
+ESPEasy can be used with a number of different controllers / home automation systms. A custom firmware build description is [available here](https://github.com/hansrune/ESPEasy-custom/blob/builds/custom/mega-20240822-1/README-custombuilds.md)
+
+ESPEasy requires many settings. For configuration settings and rule files, you can upload the files from [this page](./ESPEasy/) as a starting point. Please make sure to change name, unit number, controller IP addresses, NTP, syslog host and latitude/longitude. This configuration uses both a MQTT controller and a Domoticz controller. Change to what you need.
+
 ## Known bugs
 
 The version 2.0 PCB has some flaws that fairly easy to work around:

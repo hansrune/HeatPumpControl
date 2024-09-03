@@ -1,0 +1,5 @@
+//
+// IP=someip
+// curl -s "http://${IP}/control?cmd=heatpumpir,mitsubishi_kj,1,1,0,18,0,1"
+// curl -s "http://${IP}/control?cmd=heatpumpir,mitsubishi_kj,1,2,0,18,0,1"
+// -- end of rules3.txt --
