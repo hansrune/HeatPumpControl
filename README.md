@@ -29,6 +29,11 @@ Some of the main features and benefits
     - ESPHome to Home Assistant via MQTT and auto discovery
     - ESPHome to Domoticz via MQTT and auto discovery
     - ... and as the hardware supports using both Arduino and ESP-IF development kits, almost any other firmware can be created.
+- **3D printed enclosure**
+    - [FreeCAD](./FreeCAD) and `.stl` files provided
+- **Seed Studio XIAO ESP32C3**
+    - This device is well shielded and comes with an externam IPX antenna connector
+    - FCC and CE regulations approved
 
 ## Setup and mounting
 
