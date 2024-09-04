@@ -136,19 +136,19 @@ By default, both the serial CN105 interface as well as the IR sender is set up i
 In Home Assistant, there is this serial port / CN105 connected control
 
 <p align="center">
-    <img src="images/HA-CN105.png">
+    <img src="images/HA-CN105.jpg">
 </p>
 
 The IR blaster control:
 
 <p align="center">
-    <img src="images/HA-IR.png">
+    <img src="images/HA-IR.jpg">
 </p
 
 And the diagnostics / device details:
 
 <p align="center">
-    <img src="images/HA-diags.png">
+    <img src="images/HA-diags.jpg">
 </p>
 
 ### ESPEasy
