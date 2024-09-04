@@ -4,6 +4,8 @@ A small DYI generic mini IO based on ESP32c3. This one has an IR blaster, IR rec
 
 This board is tested with ESPhome and ESPEasy [firmware](#firmwares) (build instructions below), and is easily used with home automation systems that support MQTT auto discovery, the native Home Assistant API, and the many [controllers that ESPEasy supports](https://espeasy.readthedocs.io/en/latest/Controller/_Controller.html)
 
+A [3D printed box](#./FreeCAD/) STL files and  the FreeCAD design is also available
+
 ## Introduction
 
 This small IO board was made to easily fit inside a small DYI box, a heat pump or other.
@@ -56,12 +58,6 @@ The wiring for a Mistubishi heat pump:
 
 A visible LED can be used in series with the IR LED - just in case you want to see the activity
 
-Any small platic DYI box that fits easily inside the heat pump should do:
-
-<p align="center">
-    <img src="images/HeatPumpCtrl-Boxed-Inside.jpg">
-</p>
-
 The serial port - CN105 - on our Mitsubishi heat pumps:
 
 <p align="center">
@@ -79,7 +75,6 @@ And the device including enclosure is tiny, i.e. easy to find room for inside th
 <p align="center">
     <img src="images/HeatPumpCtrl-Boxed-Inside.jpg">
 </p>
-
 
 ### Wiring for other purposes
 
