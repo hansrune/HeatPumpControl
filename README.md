@@ -163,6 +163,8 @@ And the diagnostics / device details:
     <img src="images/HA-diags.jpg">
 </p>
 
+No 1-wire and lux sensor connected in this case
+
 ### ESPEasy
 
 ESPEasy can be used with a number of different controllers / home automation systms. A custom firmware build description is [available here](https://github.com/hansrune/ESPEasy-custom/blob/builds/custom/mega-20240822-1/README-custombuilds.md)
