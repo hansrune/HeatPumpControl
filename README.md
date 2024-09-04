@@ -2,6 +2,8 @@
 
 A small DYI generic mini IO based on ESP32c3. This one has an IR blaster, IR receiver, and serial port with a simple 5V - 3.3V level shifter suitable for Mitsubishi CN105 port. Other ESP32c3 pins are available with pin headers for I2C, 1-wire, and other general purposes
 
+This board is tested with ESPhome and ESPEasy [firmware](#firmwares) (build instructions below), and is easily used with home automation systems that support MQTT auto discovery, the native Home Assistant API, and the many [controllers that ESPEasy supports](https://espeasy.readthedocs.io/en/latest/Controller/_Controller.html)
+
 ## Introduction
 
 This small IO board was made to easily fit inside a small DYI box, a heat pump or other.
