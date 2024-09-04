@@ -133,16 +133,21 @@ Follow the [README](https://github.com/hansrune/esphome-config) for instruction 
 
 By default, both the serial CN105 interface as well as the IR sender is set up in this firmware. You likely want just one of them.
 
-This is what the device looks like in Home Assistant:
-<p align="center" width="100%">
+In Home Assistant, there is this serial port / CN105 connected control
+
+<p align="center">
     <img src="images/HA-CN105.png">
-    &nbsp;
-    &nbsp;
-    &nbsp;
+</p>
+
+The IR blaster control:
+
+<p align="center">
     <img src="images/HA-IR.png">
-    &nbsp;
-    &nbsp;
-    &nbsp;
+</p
+
+And the diagnostics / device details:
+
+<p align="center">
     <img src="images/HA-diags.png">
 </p>
 
@@ -163,6 +168,7 @@ The version 2.0 PCB has some flaws that fairly easy to work around:
 
 This project is licensed under the [GNU General Public License v3.0](GNU-LICENSE-V3.txt) for the software, [CERN-OHL-W](OHL-LICENSE.txt) for the hardware, and [CC BY-SA](CC-BY-SA-LICENCE.txt) for the documentation and ideas.
 
-<p align="center" width="100%">
+<p align="center">
     <img src="images/oshw_cert_label.png">
 </p>
+
