@@ -43,7 +43,10 @@ The version 2.0 PCB needs an extra grounding wire if you use the IR receiver gro
     <img src="images/HeatPumpCtrl-PCB-Mounts.jpg">
 </p>
 
-The wiring for a Mistubushi heat pump:
+
+### Heat pump wiring
+
+The wiring for a Mistubishi heat pump:
 
 <p align="center">
     <img src="images/HeatPumpCtrl-Wiring.jpg">
@@ -68,6 +71,15 @@ The IR sender led fits inside the receiver housing:
 <p align="center">
     <img src="images/HeatPumpCtrl-IR-LED.jpg">
 </p>
+
+And the device including enclosure is tiny, i.e. easy to find room for inside the heat pump:
+
+<p align="center">
+    <img src="images/HeatPumpCtrl-Boxed-Inside.jpg">
+</p>
+
+
+### Wiring for other purposes
 
 The same PCB can be used for many other purposes. Here is for a firmware build test with CO2 sensor, I2C temp/humid and light, PIR sensor and a 1-wire temp sensor
 
