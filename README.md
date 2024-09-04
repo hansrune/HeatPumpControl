@@ -1,10 +1,10 @@
 # Generic ESP32c3 board with IR blaster, IR receiver, serial port, i2c and more
 
-A small generic mini IO based on ESP32c3. This one has an IR blaster, IR receiver, and serial port with a simple 5V - 3.3V level shifter suitable for Mitsubishi CN105 port. Other ESP32c3 pins are available with pin headers for I2C, 1-wire, and other general purposes
+A small DYI generic mini IO based on ESP32c3. This one has an IR blaster, IR receiver, and serial port with a simple 5V - 3.3V level shifter suitable for Mitsubishi CN105 port. Other ESP32c3 pins are available with pin headers for I2C, 1-wire, and other general purposes
 
 ## Introduction
 
-This small IO board was made to easily fit inside a small DYI box, a heat pump or other. 
+This small IO board was made to easily fit inside a small DYI box, a heat pump or other.
 
 For Mitsubushi heat pumps, the CN105 connector is used for serial port communications and for power supply.
 
@@ -132,6 +132,19 @@ ESPHome firmware can be set up from [this ESPHome configuration repository](http
 Follow the [README](https://github.com/hansrune/esphome-config) for instruction on what you will likely want to change.
 
 By default, both the serial CN105 interface as well as the IR sender is set up in this firmware. You likely want just one of them.
+
+This is what the device looks like in Home Assistant:
+<p align="center" width="100%">
+    <img src="images/HA-CN105.png">
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <img src="images/HA-IR.png">
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <img src="images/HA-diags.png">
+</p>
 
 ### ESPEasy
 
