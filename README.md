@@ -6,6 +6,8 @@ This board is tested with ESPhome and ESPEasy [firmware](#firmwares) (build inst
 
 A [3D printed box](#./FreeCAD/) STL files and  the FreeCAD design is also available
 
+**PLEASE NOTE**: Use at your own risk. The ESPhome firmwares are unofficial and reverse-engineered Mitsubishi protocol based on the [Swicago library](https://github.com/SwiCago/HeatPump). The authors and contributors have extensively tested this firmware. Please note that not all units support every feature. If you need an officially supported method to remotely control your Mitsubishi device via WiFi, a commercial solution is available [here](https://www.mitsubishi-electric.co.nz/wifi/)
+
 ## Introduction
 
 This small IO board was made to easily fit inside a small DYI box, a heat pump or other.
@@ -167,6 +169,10 @@ No 1-wire and lux sensor connected in this case
 ESPEasy can be used with a number of different controllers / home automation systms. A custom firmware build description is [available here](https://github.com/hansrune/ESPEasy-custom/blob/builds/custom/mega-20240822-1/README-custombuilds.md)
 
 ESPEasy requires many settings. For configuration settings and rule files, you can upload the files from [this page](./ESPEasy/) as a starting point. Please make sure to change name, unit number, controller IP addresses, NTP, syslog host and latitude/longitude. This configuration uses both a MQTT controller and a Domoticz controller. Change to what you need.
+
+### Alternatve firmware
+
+You may be interested in looking at alternative firmwares such as [this one](https://github.com/echavet/MitsubishiCN105ESPHome)
 
 ## Known bugs
 
