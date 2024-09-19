@@ -1352,7 +1352,7 @@
 			(effects
 				(font
 					(size 0.48 0.48)
-					(thickness 0.15)
+					(thickness 0.12)
 				)
 			)
 		)
@@ -1652,6 +1652,7 @@
 			(uuid "caa1fd7a-d450-4b66-aff1-ad7429a2a64f")
 		)
 		(model "$(KIPRJMOD)/library/3D//XIAO_ESP32C3.step"
+			(hide yes)
 			(offset
 				(xyz 8 11.3 0)
 			)
@@ -1660,6 +1661,17 @@
 			)
 			(rotate
 				(xyz 0 0 180)
+			)
+		)
+		(model "${KIPRJMOD}/library/3D/XIAO-ESP32-mod.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -6100,7 +6112,7 @@
 		(descr "Diode Mini-MELF (SOD-80)")
 		(tags "Diode Mini-MELF (SOD-80)")
 		(property "Reference" "D9"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.SilkS")
 			(uuid "7ee97841-9b0a-422a-9c52-029181cee24b")
 			(effects
@@ -6111,7 +6123,7 @@
 			)
 		)
 		(property "Value" "1N4148"
-			(at 0 2 360)
+			(at 0 2 0)
 			(layer "F.Fab")
 			(uuid "1ec70d3c-3714-421f-b8d4-4e76d1be4d03")
 			(effects
@@ -6122,7 +6134,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_MiniMELF"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cfe310b5-4b8f-4a89-a76d-af970209daf9")
@@ -6134,7 +6146,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "00391b1a-e6a4-43e9-a982-dc686825d761")
@@ -6146,7 +6158,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6629785f-92b1-4345-83b1-b79367c086ea")
@@ -6343,7 +6355,7 @@
 			(uuid "53032f58-d2b5-4756-84e4-d177d082ad01")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -2 360)
+			(at 0 -2 0)
 			(layer "F.Fab")
 			(uuid "fb21aa17-484d-43f3-b18c-55543733280a")
 			(effects
