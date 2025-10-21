@@ -3309,6 +3309,12 @@
 		(uuid "39184649-f30f-49ec-9f69-93b091b1cbcd")
 	)
 	(junction
+		(at 163.83 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3b52a99e-2a36-4613-a012-68d64814935d")
+	)
+	(junction
 		(at 38.1 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3458,7 +3464,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 90.17) (xy 172.72 90.17)
+			(xy 144.78 90.17) (xy 163.83 90.17)
 		)
 		(stroke
 			(width 0)
@@ -3705,6 +3711,16 @@
 			(type default)
 		)
 		(uuid "2ca572d3-d053-4938-8805-baa7a5dc2304")
+	)
+	(wire
+		(pts
+			(xy 163.83 90.17) (xy 172.72 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "302fa612-62c4-4d27-a9b6-5e7a7e2bc5f9")
 	)
 	(wire
 		(pts
@@ -4365,6 +4381,16 @@
 			(type default)
 		)
 		(uuid "a0f76b25-bf6c-4779-8545-14e3a82efa01")
+	)
+	(wire
+		(pts
+			(xy 163.83 90.17) (xy 163.83 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a477152d-f458-4713-9936-ee6f594273ac")
 	)
 	(wire
 		(pts
@@ -6196,7 +6222,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "18k"
 			(at 178.816 85.344 90)
 			(effects
 				(font
@@ -8759,6 +8785,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 163.83 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a64aa00b-6052-4b66-9cbe-7f5531292b0a")
+		(property "Reference" "#PWR026"
+			(at 163.83 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 165.1 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.83 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 163.83 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5843a785-d4bc-4652-a02a-badbfcd775d4")
+		)
+		(instances
+			(project "HeatPumpControl"
+				(path "/2a5b3e3c-2022-46db-8938-2c3b2e9edb6d"
+					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 172.72 53.34 0)
 		(unit 1)
@@ -9013,6 +9104,75 @@
 			(project "HeatPumpControl"
 				(path "/2a5b3e3c-2022-46db-8938-2c3b2e9edb6d"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 163.83 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b1e05f1c-c914-49a7-a641-18a91560ed57")
+		(property "Reference" "R24"
+			(at 163.83 97.282 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "3k3"
+			(at 166.116 97.282 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 162.052 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 163.83 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "62bce60e-b94d-4f17-9b0d-2a77ac4463c1")
+		)
+		(pin "2"
+			(uuid "5994479f-ec21-4e83-8e2a-396dbfe9e337")
+		)
+		(instances
+			(project "HeatPumpControl"
+				(path "/2a5b3e3c-2022-46db-8938-2c3b2e9edb6d"
+					(reference "R24")
 					(unit 1)
 				)
 			)
