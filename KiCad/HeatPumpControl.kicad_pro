@@ -556,6 +556,10 @@
       {
         "netclass": "SUPPLY",
         "pattern": "*BAT"
+      },
+      {
+        "netclass": "SUPPLY",
+        "pattern": "/ON"
       }
     ]
   },
