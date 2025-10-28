@@ -5,8 +5,8 @@
 	(uuid "2a5b3e3c-2022-46db-8938-2c3b2e9edb6d")
 	(paper "A4")
 	(title_block
-		(title "Heat pump serial and IR interface")
-		(date "2025-10-02")
+		(title "Heat pump ctrl / generic IO ")
+		(date "2025-10-28")
 		(rev "v4.0")
 		(company "Hans Rune Bue <email@hansrune.net>")
 		(comment 1 "Hardware is licensed under CERN-OHL-W-2.0")
