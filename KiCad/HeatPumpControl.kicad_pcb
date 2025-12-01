@@ -9,9 +9,10 @@
 	(paper "A4")
 	(title_block
 		(title "Heath pump ctrl / generic IO")
-		(date "2025-10-28")
-		(rev "4.0")
+		(date "2025-12-01")
+		(rev "4.0.1")
 		(company "Hans Rune Bue <email@hansrune.net>")
+		(comment 1 "PCB version 4.0.0 can be still be used")
 	)
 	(layers
 		(0 "F.Cu" signal)
@@ -132,7 +133,7 @@
 	(net 9 "Net-(D4-A)")
 	(net 10 "Net-(U3-GPIO0_A0_D0)")
 	(net 11 "Net-(D6-A)")
-	(net 12 "Net-(J4-Pin_2)")
+	(net 12 "Net-(D8-A)")
 	(net 13 "/D9")
 	(net 14 "/D10")
 	(net 15 "/RX")
@@ -374,7 +375,7 @@
 				)
 			)
 		)
-		(property "Value" "51.2k"
+		(property "Value" "68k"
 			(at -4.75 5.25 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -735,7 +736,7 @@
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
-			(net 12 "Net-(J4-Pin_2)")
+			(net 12 "Net-(D8-A)")
 			(pintype "passive")
 			(uuid "7ce975ad-0ebd-4a38-9e71-1a3be42712a7")
 		)
@@ -817,7 +818,7 @@
 		(path "/6a268f6a-5dce-4b52-90d0-abf367c1473d")
 		(sheetname "/")
 		(sheetfile "HeatPumpControl.kicad_sch")
-		(attr smd)
+		(attr smd dnp)
 		(fp_line
 			(start -0.227064 -0.735)
 			(end 0.227064 -0.735)
@@ -934,7 +935,7 @@
 			(size 1.025 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.243902)
-			(net 12 "Net-(J4-Pin_2)")
+			(net 12 "Net-(D8-A)")
 			(pintype "passive")
 			(uuid "0e07c4a2-9999-4e2f-b659-7300aaac37dd")
 		)
@@ -1833,6 +1834,279 @@
 			)
 		)
 	)
+	(footprint "Diode_SMD:D_SOD-323"
+		(layer "F.Cu")
+		(uuid "396204ec-101a-477d-bf11-844747c179f0")
+		(at 165.0205 112.8903 180)
+		(descr "SOD-323")
+		(tags "SOD-323")
+		(property "Reference" "D8"
+			(at -0.2065 1.5113 0)
+			(layer "F.SilkS")
+			(uuid "33d5bc7f-3ecd-4fd2-9017-3e66d0c5dc34")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 0.1 1.9 0)
+			(layer "F.Fab")
+			(uuid "8bcbfb1f-7282-4a51-bd62-44a078cdf118")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "343e5580-ade8-479f-9252-14627df66e95")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aa02b0d6-f4a0-41aa-b8f1-8fec4ac229af")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "D*DO?35*")
+		(path "/f83a6652-fc30-4b60-a4e9-d32bd30c8883")
+		(sheetname "/")
+		(sheetfile "HeatPumpControl.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start -1.61 0.85)
+			(end 1.05 0.85)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a2a69bf9-d96c-455a-9451-c2058548ce8d")
+		)
+		(fp_line
+			(start -1.61 -0.85)
+			(end 1.05 -0.85)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "1bb9609d-7513-4967-a3df-f095e1d93192")
+		)
+		(fp_line
+			(start -1.61 -0.85)
+			(end -1.61 0.85)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "8f38dc0a-fb2b-4dd6-9040-6db5262eeffc")
+		)
+		(fp_line
+			(start 1.6 -0.95)
+			(end 1.6 0.95)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "8acf5d1f-016d-4e3c-863f-2b81c470f540")
+		)
+		(fp_line
+			(start -1.6 0.95)
+			(end 1.6 0.95)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "64e2e8de-b3ad-4d8f-b7f3-46e215362ca2")
+		)
+		(fp_line
+			(start -1.6 -0.95)
+			(end 1.6 -0.95)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "653b1c46-b23d-49c5-8363-fc6afe914537")
+		)
+		(fp_line
+			(start -1.6 -0.95)
+			(end -1.6 0.95)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "6447b220-1e14-4ae6-b776-110cab2b1ad4")
+		)
+		(fp_line
+			(start 0.9 0.7)
+			(end -0.9 0.7)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "55e13f99-bffc-48b1-9e49-a815f59e983a")
+		)
+		(fp_line
+			(start 0.9 -0.7)
+			(end 0.9 0.7)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "cb1550e3-d425-46ae-ab13-60368f4c8483")
+		)
+		(fp_line
+			(start 0.2 0.35)
+			(end -0.3 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "d08468dd-577a-4f6c-acb4-c06353cc6ee4")
+		)
+		(fp_line
+			(start 0.2 0)
+			(end 0.45 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "3069e5ff-c1d7-4847-bef8-760b4957204e")
+		)
+		(fp_line
+			(start 0.2 -0.35)
+			(end 0.2 0.35)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "8f389df5-d219-42de-af86-ce884930a5b5")
+		)
+		(fp_line
+			(start -0.3 0)
+			(end 0.2 -0.35)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "d5747bb4-20fe-4c6c-a823-6d57d1ea5920")
+		)
+		(fp_line
+			(start -0.3 0)
+			(end -0.5 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "d112e64c-106f-4875-b882-bd4a40a596a4")
+		)
+		(fp_line
+			(start -0.3 -0.35)
+			(end -0.3 0.35)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "78d79ebd-1c7d-463e-86b1-65585d381414")
+		)
+		(fp_line
+			(start -0.9 0.7)
+			(end -0.9 -0.7)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "b10b3f6a-a842-4eac-8caa-3a722e8ceca8")
+		)
+		(fp_line
+			(start -0.9 -0.7)
+			(end 0.9 -0.7)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "88dc69a7-d745-4200-8aa2-40aa252fe9ec")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 -1.85 0)
+			(layer "F.Fab")
+			(uuid "366a4a3d-c776-4f22-898c-8eb060ffa726")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -1.05 0 180)
+			(size 0.6 0.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 24 "/ON")
+			(pinfunction "K")
+			(pintype "passive")
+			(uuid "f570ef70-d6aa-42f1-8fed-24f4550946aa")
+		)
+		(pad "2" smd roundrect
+			(at 1.05 0 180)
+			(size 0.6 0.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net 12 "Net-(D8-A)")
+			(pinfunction "A")
+			(pintype "passive")
+			(uuid "5c3ff6ce-63ee-47a2-bb3e-462f63336d1f")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Diode_SMD.3dshapes/D_SOD-323.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "LED_SMD:LED_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "3c7647ae-d3fc-4a04-9165-bc1415a0253f")
@@ -2492,7 +2766,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "Net-(J4-Pin_2)")
+			(net 12 "Net-(D8-A)")
 			(pinfunction "Pin_2")
 			(pintype "passive")
 			(uuid "b62e94ab-9e89-434d-84b8-39c30a25935d")
@@ -4621,7 +4895,7 @@
 		(path "/400e16e6-70d7-4055-a2f0-d5ed3657e985")
 		(sheetname "/")
 		(sheetfile "HeatPumpControl.kicad_sch")
-		(attr smd)
+		(attr smd dnp)
 		(fp_line
 			(start -2.66 -1.11)
 			(end -2.66 1.11)
@@ -6891,7 +7165,7 @@
 				)
 			)
 		)
-		(property "Value" "82k"
+		(property "Value" "1M"
 			(at 0 1.65 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7050,7 +7324,7 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
-			(net 12 "Net-(J4-Pin_2)")
+			(net 12 "Net-(D8-A)")
 			(pintype "passive")
 			(uuid "7c0f66ac-ed85-4c55-ac2b-52a93be859ef")
 		)
@@ -8023,7 +8297,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "37e45238-7797-46f0-bf30-b5640e475611")
+			(uuid "f505a3eb-ed81-4c28-a2eb-4e2d95be579e")
 		)
 		(fp_line
 			(start 4.2774 -11.5255)
@@ -8033,7 +8307,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "025d033f-88dd-4357-bc15-de0787612365")
+			(uuid "1cc623d2-a99c-4937-a244-bcad0a851566")
 		)
 		(fp_line
 			(start 6.7584 -10.5155)
@@ -8043,7 +8317,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "8d62f711-fcaf-4817-862d-d73ce0f23d4d")
+			(uuid "24747e98-f395-424a-b242-4d443d6ec64e")
 		)
 		(fp_line
 			(start -4.7216 -10.5155)
@@ -8053,7 +8327,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "685f4772-9eff-4209-92ab-5693c32d9d53")
+			(uuid "e9c23c0c-db10-44e6-813f-1443cad54781")
 		)
 		(fp_line
 			(start 8.6634 8.5345)
@@ -8063,7 +8337,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "42677d03-69f0-4ab5-a5bd-e3fca69f7ade")
+			(uuid "463e63b6-8ea1-4a26-b03c-4f73b4deef72")
 		)
 		(fp_line
 			(start -9.1166 8.5345)
@@ -8073,7 +8347,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "86110079-513f-442d-835d-0edb71ab18c1")
+			(uuid "afe710be-fd3f-4f43-8484-a9dff96110ea")
 		)
 		(fp_line
 			(start -7.2116 10.4395)
@@ -8083,7 +8357,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "d5022269-14fb-4e49-a326-32645e8d2b41")
+			(uuid "b188c250-67f9-459b-9f5b-f6d237167b3b")
 		)
 		(fp_arc
 			(start 3.7774 -12.0255)
@@ -8094,7 +8368,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "ec7fc0d0-7f1c-41dc-b905-d76289c2330d")
+			(uuid "8f908a6f-527c-4004-bf41-657fd190a99d")
 		)
 		(fp_arc
 			(start -4.717872 -11.525772)
@@ -8105,7 +8379,7 @@
 				(type default)
 			)
 			(layer "F.SilkS")
-			(uuid "8110180c-3f14-4032-aa84-b2c8ec392a9e")
+			(uuid "5ac7b546-ebc9-47e1-a6fc-94a0ab7156a6")
 		)
 		(fp_arc
 			(start 6.7584 -10.5155)
@@ -8116,7 +8390,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "cb05ef03-4dfc-4b43-9797-9a7269b332a4")
+			(uuid "e8219958-6c48-47c6-9932-4d6e10f0e8b4")
 		)
 		(fp_arc
 			(start -9.1166 -8.6145)
@@ -8127,7 +8401,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "ea8aaf24-9385-477e-a262-3ef2c7a09fac")
+			(uuid "9d2b4bce-95fc-4261-a232-2c0e0d8cf77d")
 		)
 		(fp_arc
 			(start 8.6634 8.5345)
@@ -8138,7 +8412,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "1143a2c9-947a-491b-a1be-7a7b98a596ef")
+			(uuid "8a1968a3-22c4-4270-9ae8-05f6dd1270ef")
 		)
 		(fp_arc
 			(start -7.2116 10.4395)
@@ -8149,7 +8423,7 @@
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "41a84a81-fa9b-4bb6-8903-9066340479f7")
+			(uuid "7216ad76-e551-4dc4-86cc-4c5951e6196a")
 		)
 		(fp_circle
 			(center -9.3266 -10.0995)
@@ -8160,7 +8434,7 @@
 			)
 			(fill yes)
 			(layer "F.SilkS")
-			(uuid "76f3f620-2316-4af7-8fef-14274b96acf5")
+			(uuid "ffcc2e3c-0bb0-4185-8446-7484cfb9b40f")
 		)
 		(fp_circle
 			(center -8.0526 -9.3825)
@@ -8171,7 +8445,7 @@
 			)
 			(fill yes)
 			(layer "F.SilkS")
-			(uuid "283ad81f-45f7-4282-ad1c-5e62cf851631")
+			(uuid "68688e5e-dbea-41e1-aa8b-c7fe81efe09a")
 		)
 		(fp_rect
 			(start 8.6834 10.5215)
@@ -8182,7 +8456,7 @@
 			)
 			(fill no)
 			(layer "F.CrtYd")
-			(uuid "22914d74-2241-4629-a626-7f849fdfe71a")
+			(uuid "74cefa4f-a473-4938-9435-30a8b6e43aed")
 		)
 		(fp_rect
 			(start -9.1166 -10.4785)
@@ -8193,7 +8467,7 @@
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "b7d95a19-b4c6-44fe-9a09-1218317c3acf")
+			(uuid "d20e2317-13b7-4762-95c2-d54ff142e236")
 		)
 		(fp_circle
 			(center -8.0326 -9.3785)
@@ -8204,7 +8478,7 @@
 			)
 			(fill yes)
 			(layer "F.Fab")
-			(uuid "88ec23f1-30f4-495d-b114-db41e1faa465")
+			(uuid "c9a018c4-f138-4322-aa08-70352167d7cf")
 		)
 		(pad "1" smd roundrect
 			(at -8.2816 -7.5985 90)
@@ -8396,7 +8670,7 @@
 			(pintype "passive")
 			(solder_mask_margin 0.0508)
 			(thermal_bridge_angle 45)
-			(uuid "1d20cb6e-069d-4a1d-abde-f8021f522431")
+			(uuid "127730ab-19e2-4e6e-8e42-a0d12013ca7b")
 		)
 		(pad "16" smd roundrect
 			(at -4.699 -2.286 270)
@@ -8420,7 +8694,7 @@
 			(pintype "passive")
 			(solder_mask_margin 0.0508)
 			(thermal_bridge_angle 45)
-			(uuid "afde0b6d-bf20-4b4a-a2fd-cbeb8b53028d")
+			(uuid "b451c942-84f3-4666-91ad-57881413a781")
 		)
 		(pad "17" smd circle
 			(at -1.5 -8.62 90)
@@ -9504,7 +9778,7 @@
 		(path "/525c8c1f-a5cf-461c-a15e-e976584fdadc")
 		(sheetname "/")
 		(sheetfile "HeatPumpControl.kicad_sch")
-		(attr smd)
+		(attr smd dnp)
 		(fp_line
 			(start -0.227064 0.735)
 			(end 0.227064 0.735)
@@ -9875,7 +10149,7 @@
 			(size 1.9 0.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net 12 "Net-(J4-Pin_2)")
+			(net 12 "Net-(D8-A)")
 			(pinfunction "G")
 			(pintype "input")
 			(uuid "ce881b03-091e-4533-a202-a41a9efbff07")
@@ -10571,7 +10845,7 @@
 		(path "/52278d37-c30a-4345-9da6-a5ad771d710a")
 		(sheetname "/")
 		(sheetfile "HeatPumpControl.kicad_sch")
-		(attr smd)
+		(attr smd dnp)
 		(fp_line
 			(start -1.61 0.85)
 			(end 1.05 0.85)

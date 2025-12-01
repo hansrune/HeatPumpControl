@@ -5,12 +5,13 @@
 	(uuid "2a5b3e3c-2022-46db-8938-2c3b2e9edb6d")
 	(paper "A4")
 	(title_block
-		(title "Heat pump ctrl / generic IO ")
-		(date "2025-10-28")
-		(rev "v4.0")
+		(title "ESP32C3/C6 with serial port, IR sender, I2C and battery operation")
+		(date "2025-12-01")
+		(rev "v4.0.1")
 		(company "Hans Rune Bue <email@hansrune.net>")
 		(comment 1 "Hardware is licensed under CERN-OHL-W-2.0")
 		(comment 2 "Project documents are licensed under CC-BY-SA 2.0")
+		(comment 3 "PCB version 4.0.0 can still be used")
 	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x03_Pin"
@@ -3217,36 +3218,42 @@
 	)
 	(text "Strapping pins:\n\nIO8  IO9 \n NA   1   SPI boot (default) Flash boot\n 1    0   Download"
 		(exclude_from_sim no)
-		(at 19.05 193.04 0)
+		(at 17.526 177.038 0)
 		(effects
 			(font
-				(size 2.54 2.54)
+				(size 2 2)
 			)
 			(justify left bottom)
 		)
 		(uuid "c57af653-d404-456d-be62-fa54816ce92d")
 	)
-	(text "NOTES:\n  D7, D9, D10 normally 0 ohm\n  R10 and R12 normally unused\n\nERRORS:\n  H2 / IR receiver has no GND\n  Q1 is upside down \n   "
+	(text "NOTES:\n  LED D1+D2+(and D3) should not be present if +VBAT is from LiPo\n  D7, D10 normally not used - when R18 R16 is used\n  R20 and R22 normally not used\n  R19 only used with LiPo battery\n\n   "
 		(exclude_from_sim no)
-		(at 212.09 124.46 0)
+		(at 16.002 201.676 0)
 		(effects
 			(font
-				(size 2.54 2.54)
+				(size 2 2)
 			)
 			(justify left bottom)
 		)
 		(uuid "d4cb8b82-c7ad-4d3f-8c1c-421fb11e14e5")
 	)
-	(text "D0  - PULLED UP - N/A\nA1  - General IO, no pull-uo\nD2  - IR out\nD3  - PIR, 1-Wire,\n           open drain/collector,\n           any pulled up\nD4  - I2C SDA\nD5  - I2C SCL\nD8  - PULLED UP - N/A\nD9  - ILED\nD10 - PIR, 1-Wire, \n           open drain/collector,\n           any pulled up\nD6  - RX <--> TX\nD7  - TX <--> RX"
+	(text "ESP32C3:\n  GPIO2/D0  - PULLED UP - N/A\n  GPIO3/A1  - General IO, no pull-up\n  GPIO4/D2  - IR out\n  GPIO5/D3  - PIR, 1-Wire,\n              open drain/collector,\n  GPIO6/D4  - I2C SDA\n  GPIO7/D5  - I2C SCL\n  GPIO8/D8  - PULLED UP - N/A\n  GPIO9/D9  - ILED\n  GPIO10D10 - PIR, 1-Wire, \n              open drain/collector,\n  GPIO21/D6  - RX <--> TX\n  GPIO20/D7  - TX <--> RX\n\n  Avoid GPIO 0,8,9\n\n\nESP32C6:\n\n  GPIO0/D0   - /BAT READ\n  GPIO1/A1   - BAT Vin\n  GPIO2/D2   - IR out\n  GPIO21/D3  - PIR, 1-Wire,\n               open drain/collector,\n               any pulled up\n  GPIO22/D4  - I2C SDA\n  GPIO23/D5  - I2C SCL\n  GPIO20/D9  - ILED\n  GPIO18/D10 - PIR, 1-Wire,\n               open drain/collector,\n               any pulled up\n  GPIO17/D7  - RX / 1-wire\n  GPIO16/D6  - TX / 1-wire\n\n  GPIO3      - /Antenna chip\n  GPIO14     - H=ext antenna\n  GPIO15     - /Module yellow LED\n\n  Avoid GPIO 4,5,8,9,15\n"
 		(exclude_from_sim no)
-		(at 212.09 85.09 0)
+		(at 222.504 146.558 0)
 		(effects
 			(font
-				(size 2.54 2.54)
+				(size 2 2)
 			)
 			(justify left bottom)
 		)
 		(uuid "eeaced9a-832d-4e1c-bf44-740d9cd85119")
+	)
+	(junction
+		(at 33.02 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0053ff41-09be-4fbe-90f9-13023c34675e")
 	)
 	(junction
 		(at 170.18 143.51)
@@ -3355,6 +3362,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "77962cac-27cf-43b7-a729-11ac33aad2a6")
+	)
+	(junction
+		(at 33.02 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "82785aea-f3cb-4489-9f4b-fd819e547b3e")
 	)
 	(junction
 		(at 38.1 121.92)
@@ -3469,6 +3482,16 @@
 			(type default)
 		)
 		(uuid "0b0137ff-0fe4-4338-aba8-e372a3f05f19")
+	)
+	(wire
+		(pts
+			(xy 33.02 78.74) (xy 33.02 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b8360c6-302b-4931-b955-53b8ce5c5a5f")
 	)
 	(wire
 		(pts
@@ -3812,6 +3835,16 @@
 	)
 	(wire
 		(pts
+			(xy 27.94 88.9) (xy 33.02 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "420af77b-639e-4b06-97cf-d8ef1fc5aeef")
+	)
+	(wire
+		(pts
 			(xy 151.13 67.31) (xy 151.13 64.77)
 		)
 		(stroke
@@ -3822,7 +3855,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 53.34) (xy 33.02 80.01)
+			(xy 33.02 53.34) (xy 33.02 78.74)
 		)
 		(stroke
 			(width 0)
@@ -3879,6 +3912,16 @@
 			(type default)
 		)
 		(uuid "4cfbbf83-f7d3-4038-b9e5-57c946feb869")
+	)
+	(wire
+		(pts
+			(xy 33.02 88.9) (xy 33.02 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d0a8a2d-1fbc-4900-adb0-3b7609916c57")
 	)
 	(wire
 		(pts
@@ -4332,6 +4375,16 @@
 	)
 	(wire
 		(pts
+			(xy 27.94 78.74) (xy 33.02 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a28e225e-9d19-436c-8103-404b96957afe")
+	)
+	(wire
+		(pts
 			(xy 163.83 90.17) (xy 163.83 91.44)
 		)
 		(stroke
@@ -4409,6 +4462,16 @@
 			(type default)
 		)
 		(uuid "ae38563d-1016-44bc-8ccd-51116403daac")
+	)
+	(wire
+		(pts
+			(xy 27.94 87.63) (xy 27.94 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b009cc51-0f92-44ab-abfb-5ab13aebfd78")
 	)
 	(wire
 		(pts
@@ -4672,6 +4735,16 @@
 	)
 	(wire
 		(pts
+			(xy 27.94 80.01) (xy 27.94 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d56531c6-7223-441f-a88c-319bb1efdc10")
+	)
+	(wire
+		(pts
 			(xy 49.53 133.35) (xy 49.53 134.62)
 		)
 		(stroke
@@ -4792,7 +4865,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 87.63) (xy 33.02 110.49)
+			(xy 33.02 87.63) (xy 33.02 88.9)
 		)
 		(stroke
 			(width 0)
@@ -6373,13 +6446,12 @@
 			)
 		)
 		(property "Value" "1N4148"
-			(at 181.61 102.87 0)
+			(at 180.594 97.536 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_MiniMELF"
@@ -6977,7 +7049,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "400e16e6-70d7-4055-a2f0-d5ed3657e985")
 		(property "Reference" "D10"
 			(at 176.53 153.67 0)
@@ -7384,7 +7456,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "52278d37-c30a-4345-9da6-a5ad771d710a")
 		(property "Reference" "D7"
 			(at 171.45 148.59 0)
@@ -7454,7 +7526,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "525c8c1f-a5cf-461c-a15e-e976584fdadc")
 		(property "Reference" "R10"
 			(at 190.5 135.382 90)
@@ -7653,10 +7725,10 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "6a268f6a-5dce-4b52-90d0-abf367c1473d")
 		(property "Reference" "R20"
-			(at 29.972 84.074 0)
+			(at 35.306 84.074 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7862,7 +7934,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "51.2k"
+		(property "Value" "68k"
 			(at 50.546 64.516 90)
 			(effects
 				(font
@@ -8066,7 +8138,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "82k"
+		(property "Value" "1M"
 			(at 43.18 49.53 90)
 			(effects
 				(font
@@ -8193,7 +8265,7 @@
 		(dnp no)
 		(uuid "854f31bb-5f93-416c-b452-e41900ba7452")
 		(property "Reference" "R19"
-			(at 106.934 107.188 90)
+			(at 106.68 102.616 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10202,10 +10274,10 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "f40c0c08-1f80-4166-b62a-0f172ee1641c")
 		(property "Reference" "R22"
-			(at 177.292 101.6 90)
+			(at 177.546 106.426 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10326,6 +10398,76 @@
 			(project "HeatPumpControl"
 				(path "/2a5b3e3c-2022-46db-8938-2c3b2e9edb6d"
 					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 27.94 83.82 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f83a6652-fc30-4b60-a4e9-d32bd30c8883")
+		(property "Reference" "D8"
+			(at 25.146 82.804 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 29.9466 84.963 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 32.385 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf"
+			(at 27.94 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 27.94 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6ed9fa12-f68f-44b2-9112-58623b269126")
+		)
+		(pin "2"
+			(uuid "8a0a9e63-7d23-47ba-9f1e-07499654f2e3")
+		)
+		(instances
+			(project "HeatPumpControl"
+				(path "/2a5b3e3c-2022-46db-8938-2c3b2e9edb6d"
+					(reference "D8")
 					(unit 1)
 				)
 			)
