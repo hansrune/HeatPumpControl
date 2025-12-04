@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "ESP32C3/C6 with serial port, IR sender, I2C and battery operation")
-		(date "2025-12-01")
-		(rev "v4.0.1")
+		(date "2025-12-04")
+		(rev "v4.0.2")
 		(company "Hans Rune Bue <email@hansrune.net>")
 		(comment 1 "Hardware is licensed under CERN-OHL-W-2.0")
 		(comment 2 "Project documents are licensed under CC-BY-SA 2.0")
@@ -3227,7 +3227,7 @@
 		)
 		(uuid "c57af653-d404-456d-be62-fa54816ce92d")
 	)
-	(text "NOTES:\n  LED D1+D2+(and D3) should not be present if +VBAT is from LiPo\n  D7, D10 normally not used - when R18 R16 is used\n  R20 and R22 normally not used\n  R19 only used with LiPo battery\n\n   "
+	(text "NOTES:\n  LED D1+D2+(and D3) should not be present if +VBAT is from LiPo\n  D7, D10 normally not used - when R18 R16 is used\n  R20, R21 and R22 normally not used\n  R19 only used with LiPo battery\n\n   "
 		(exclude_from_sim no)
 		(at 16.002 201.676 0)
 		(effects
@@ -3412,6 +3412,18 @@
 		(uuid "cf0d422a-a2b6-4dbd-93d9-3fb0873fa1ec")
 	)
 	(junction
+		(at 55.88 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d437357b-24f9-46d3-bae7-b1960d96e41e")
+	)
+	(junction
+		(at 55.88 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "da5bce50-b1c5-4702-94e2-25b5c4bb4e78")
+	)
+	(junction
 		(at 171.45 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3422,6 +3434,16 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fa084c58-6dc6-4219-8ac8-9aaf5cc04bd6")
+	)
+	(wire
+		(pts
+			(xy 60.96 44.45) (xy 55.88 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01065177-597d-4d07-b123-607c7c08c159")
 	)
 	(wire
 		(pts
@@ -3495,7 +3517,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 50.8) (xy 54.61 58.42)
+			(xy 55.88 57.15) (xy 55.88 58.42)
 		)
 		(stroke
 			(width 0)
@@ -3565,6 +3587,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 58.42) (xy 60.96 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18b4f88b-f347-4391-990e-f5779d932072")
+	)
+	(wire
+		(pts
 			(xy 96.52 67.31) (xy 101.6 67.31)
 		)
 		(stroke
@@ -3582,6 +3614,16 @@
 			(type default)
 		)
 		(uuid "1b16ebad-1439-4e4b-89fc-4b0f814505c4")
+	)
+	(wire
+		(pts
+			(xy 55.88 44.45) (xy 55.88 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c11b344-f5eb-4868-b9f2-89bdd567ad41")
 	)
 	(wire
 		(pts
@@ -4055,6 +4097,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 58.42) (xy 60.96 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d1367ed-c884-41a8-a714-20d4c0b6cc1f")
+	)
+	(wire
+		(pts
 			(xy 182.88 152.4) (xy 185.42 152.4)
 		)
 		(stroke
@@ -4182,6 +4234,16 @@
 			(type default)
 		)
 		(uuid "77f54099-5442-40c1-bcc9-7297bf6b9b91")
+	)
+	(wire
+		(pts
+			(xy 60.96 49.53) (xy 60.96 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79c04fae-fa34-4bf9-b399-65310fc17fc6")
 	)
 	(wire
 		(pts
@@ -4635,7 +4697,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 41.91) (xy 54.61 43.18)
+			(xy 55.88 41.91) (xy 55.88 44.45)
 		)
 		(stroke
 			(width 0)
@@ -4765,7 +4827,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 58.42) (xy 54.61 58.42)
+			(xy 48.26 58.42) (xy 55.88 58.42)
 		)
 		(stroke
 			(width 0)
@@ -8601,15 +8663,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 54.61 46.99 0)
+		(at 55.88 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "9c241947-c050-46c0-b62b-e4a0e73ba7dd")
 		(property "Reference" "R21"
-			(at 51.562 47.244 0)
+			(at 53.848 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8617,7 +8679,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 54.61 46.99 90)
+			(at 56.134 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8625,7 +8687,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 52.832 46.99 90)
+			(at 54.102 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8634,7 +8696,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 54.61 46.99 0)
+			(at 55.88 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8643,7 +8705,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 54.61 46.99 0)
+			(at 55.88 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9262,7 +9324,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 54.61 41.91 0)
+		(at 55.88 41.91 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9271,7 +9333,7 @@
 		(dnp no)
 		(uuid "b9955042-a350-46d1-ad45-8e4120666958")
 		(property "Reference" "#PWR034"
-			(at 54.61 45.72 0)
+			(at 55.88 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9280,7 +9342,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 54.229 37.5158 0)
+			(at 55.499 37.5158 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9288,7 +9350,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 54.61 41.91 0)
+			(at 55.88 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9297,7 +9359,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 41.91 0)
+			(at 55.88 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9306,7 +9368,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 54.61 41.91 0)
+			(at 55.88 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9656,6 +9718,75 @@
 			(project "HeatPumpControl"
 				(path "/2a5b3e3c-2022-46db-8938-2c3b2e9edb6d"
 					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148")
+		(at 60.96 53.34 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dabecf11-e52b-44f5-9e22-ec039adf8c04")
+		(property "Reference" "D12"
+			(at 58.674 55.372 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N4007"
+			(at 63.246 56.896 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 56.515 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 60.96 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7361fc66-88de-449d-a8df-a7a825d3ac2b")
+		)
+		(pin "2"
+			(uuid "6fc0be85-fa31-41cf-bf1d-603c05436baa")
+		)
+		(instances
+			(project "HeatPumpControl"
+				(path "/2a5b3e3c-2022-46db-8938-2c3b2e9edb6d"
+					(reference "D12")
 					(unit 1)
 				)
 			)
