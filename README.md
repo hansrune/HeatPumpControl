@@ -1,6 +1,6 @@
-# Generic ESP32c3 board with IR blaster, IR receiver, serial port, i2c and more
+# Generic ESP32 C3/C6 board with IR blaster, serial port, i2c, 1-wire and more
 
-A small DYI generic mini IO based on ESP32c3. This one has an IR blaster, IR receiver, and serial port with a simple 5V - 3.3V level shifter suitable for Mitsubishi CN105 port, and similar for any RS-232 interfaces . Other ESP32c3 pins are available with pin headers for I2C, 1-wire, and other general purposes
+A small DYI generic mini IO based on ESP32C3 or ESP32C6 from Xiaomi SeeedStudio. This board has an IR blaster, IR receiver, and serial port with a simple 5V - 3.3V level shifter suitable for Mitsubishi CN105 port (similar for any RS-232 interfaces) . Other ESP32 pins are available with pin headers for I2C, 1-wire, and other general purposes
 
 This board is tested with ESPhome and ESPEasy [firmware](#firmwares) (build instructions below), and is easily used with home automation systems that support MQTT auto discovery, the native Home Assistant API, and the many [controllers that ESPEasy supports](https://espeasy.readthedocs.io/en/latest/Controller/_Controller.html)
 
@@ -20,9 +20,6 @@ Some of the main features and benefits
     - The CN105 port of Mitsubishi ports can be used - and will then also provide the power supply for the board
 - **An IR blaster circuit**
     - Some features / command packets are easier to find from a native IR receiver
-- **An IR receiver**
-    - Available to use - but not tested with any firmwares yet.
-      IR protocol decodes from a native remote control is probably easier to do from a Raspberry Pi or similar
 - **I2C and/or 1-wire**
 - **Other GPIO ports**
 - **WiFi based**
@@ -31,7 +28,7 @@ Some of the main features and benefits
     - Configuration backup, restore and bulk updates.
 - **Firmware of your choise**
     - ESPEasy with Domoticz over http. Device creation uses virtual sensors
-    - ESPEasy with Domotics and Home Assistant via MQTT. Device creation uses a MQTT configuration text file.
+    - ESPEasy with Domoticz and Home Assistant via MQTT. Device creation uses a MQTT configuration text file.
     - ESPHome to Home Assistant via MQTT and auto discovery
     - ESPHome to Domoticz via MQTT and auto discovery
     - ... and as the hardware supports using both Arduino and ESP-IF development kits, almost any other firmware can be created.
@@ -40,15 +37,6 @@ Some of the main features and benefits
 - **Seed Studio XIAO ESP32C3**
     - This device is well shielded and comes with an externam IPX antenna connector
     - FCC and CE regulations approved
-
-## Setup and mounting
-
-The version 2.0 PCB needs an extra grounding wire if you use the IR receiver ground pin:
-
-<p align="center">
-    <img src="images/HeatPumpCtrl-PCB-Mounts.jpg">
-</p>
-
 
 ### Heat pump wiring
 
