@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "ESP32C3/C6 with serial port, IR sender, I2C and battery operation")
-		(date "2025-12-04")
-		(rev "v4.0.2")
+		(date "2025-12-23")
+		(rev "v4.0.3")
 		(company "Hans Rune Bue <email@hansrune.net>")
 		(comment 1 "Hardware is licensed under CERN-OHL-W-2.0")
 		(comment 2 "Project documents are licensed under CC-BY-SA 2.0")
@@ -9750,7 +9750,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
+		(property "Footprint" "Diode_SMD:D_SOD-123"
 			(at 56.515 53.34 0)
 			(effects
 				(font
