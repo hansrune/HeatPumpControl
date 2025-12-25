@@ -584,7 +584,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "HeatPumpControl-BoM-4.0.2.txt",
+    "bom_export_filename": "HeatPumpControl-BoM-4.0.3.txt",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": "|",
